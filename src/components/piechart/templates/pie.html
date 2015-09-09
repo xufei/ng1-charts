@@ -1,0 +1,21 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="640" height="480">
+    <title>用AngularJS做图表</title>
+    <desc>用AngularJS生成的图表</desc>
+
+    <!--背景-->
+    <rect x="0" y="0" ng-attr-width="{{width}}" ng-attr-height="{{height}}" stroke-width="1" stroke="none" fill="white"/>
+
+    <!--饼图-->
+    <g ng-attr-transform="{{chartTransform()}}">
+        <path ng-repeat="item in data[0].data" ng-class="'series'+$index" ng-attr-d="{{path($index)}}"/>
+    </g>
+
+    <!--图例-->
+    <g ng-attr-transform="{{legendTransform()}}">
+        <rect class="legend-box" x="0" y="0" width="150" ng-attr-height="{{20 + 21*data[0].data.length}}"/>
+
+        <rect ng-repeat-start="item in data[0].data" ng-class="'series'+$index" transform="scale(1, -1)"
+              x="5" ng-attr-y="{{-21 - 21*$index}}" width="30" height="15"/>
+        <text ng-repeat-end class="legend-text" x="40" ng-attr-y="{{21 + 21*$index}}">{{item}}</text>
+    </g>
+</svg>

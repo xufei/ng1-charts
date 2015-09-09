@@ -1,8 +1,8 @@
-import template from "../templates/bar.html";
+import template from "../templates/radar.html";
 
-import BarChart from "../../../models/chart/bar";
+import RadarChart from "../../../models/chart/radar";
 
-export default class BarChartDirective {
+export default class RadarChartDirective {
 	constructor() {
 		this.template = template;
 		this.restrict = "E";
@@ -17,11 +17,8 @@ export default class BarChartDirective {
 	}
 
 	controller($scope) {
-		let chart = new BarChart();
+		let chart = new RadarChart();
 		$scope.chart = chart;
-
-		chart.width = 600;
-		chart.height = 400;
 
 		$scope.$watch("data", function(newData) {
 			chart.data = newData;

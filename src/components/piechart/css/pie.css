@@ -1,0 +1,106 @@
+/* color series */
+.series0 {
+    fill:   rgb(255, 127, 80);
+}
+
+.series1 {
+    fill:   rgb(135, 206, 250);
+}
+
+.series2 {
+    fill:   rgb(218, 112, 214);
+}
+
+.series3 {
+    fill:   rgb(50, 205, 50);
+}
+
+.series4 {
+    fill:   rgb(100, 145, 237);
+}
+
+.series5 {
+    fill:   rgb(255, 105, 180);
+}
+
+.series6 {
+    fill:   rgb(186, 85, 211);
+}
+
+.series7 {
+    fill:   rgb(205, 92, 92);
+}
+
+.series8 {
+    fill:   rgb(255, 165, 0);
+}
+
+.series9 {
+    fill:   rgb(64, 224, 208);
+}
+
+.grid-line {
+    stroke: lightgrey;
+    stroke-width: 1;
+}
+
+.axis-line-x {
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.axis-line-y {
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.axis-line-y2 {
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.axis-mark-main {
+    stroke: black;
+    stroke-width: 1;
+}
+
+.axis-mark-second {
+    stroke: black;
+    stroke-width: 1;
+}
+
+.axis-title-x {
+    font-size: 18px;
+}
+
+.axis-number-x {
+    font-size: 15px;
+}
+
+.axis-title-y {
+    font-size: 18px;
+}
+
+.axis-number-y {
+    font-size: 15px;
+}
+
+
+.series-areas-general {
+    stroke-width: 0;
+}
+
+
+.legend-box {
+    stroke: black;
+    stroke-width: 1;
+    fill: white;
+}
+
+.legend-text {
+    font-size: 15px;
+    text-anchor: start;
+}

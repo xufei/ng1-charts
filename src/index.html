@@ -9,8 +9,18 @@
 <body>
 <div ng-app="chart">
     <div ng-controller="ChartController">
+        <ul>
+            <li ng-repeat="item in chart[0].data"><input type="number" ng-model="item"/></li>
+        </ul>
+
         <div>
-            <ng-bar-chart data="barChart"></ng-bar-chart>
+            <ng-bar-chart data="chart"></ng-bar-chart>
+        </div>
+        <div>
+            <ng-pie-chart data="chart" radius="100"></ng-pie-chart>
+        </div>
+        <div>
+            <ng-radar-chart data="chart"></ng-radar-chart>
         </div>
     </div>
 </div>

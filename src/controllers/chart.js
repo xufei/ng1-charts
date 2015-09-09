@@ -2,8 +2,8 @@
 
 export default class ChartController {
 	constructor($scope) {
-		$scope.barChart = [{
-			data: [8, 6, 11, 7, 5, 40, 21]
+		$scope.chart = [{
+			data: [8, 2, 11, 7, 40, 21]
 		}];
 	}
 }

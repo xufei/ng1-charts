@@ -9,7 +9,7 @@
 
 
     <path fill="none"
-          ng-attr-transform="{{'translate(0,' + (500-chart.offsetTop) + ')'}}"
+          ng-attr-transform="{{'translate(0,' + (chart.height-chart.offsetTop) + ')'}}"
           ng-attr-d="{{chart.xAxisPath}}" stroke="#808080" strok-width="4"></path>
 
     <path fill="rgba(124,181,236,0.25)" d="M 0 0"></path>
@@ -40,7 +40,7 @@
 
             <rect ng-repeat="axis in chart.xAxis"
                   fill="#7cb5ec" stroke="#FFFFFF" stroke-width="1" width="30"
-                  ng-attr-x="{{axis.x}}" ng-attr-y="{{500-axis.height}}"
+                  ng-attr-x="{{axis.x}}" ng-attr-y="{{chart.height-axis.height}}"
                   ng-attr-height="{{axis.height}}"></rect>
         </g>
     </g>
@@ -51,7 +51,7 @@
 
     <!--横坐标刻度-->
     <g zIndex="7"
-       ng-attr-transform="{{'translate(' + (chart.offsetLeft+10) + ',' + (500-chart.offsetTop+15) + ')'}}">
+       ng-attr-transform="{{'translate(' + (chart.offsetLeft+10) + ',' + (chart.height-chart.offsetTop+15) + ')'}}">
         <text ng-repeat="axis in chart.xAxis" ng-attr-x="{{axis.x}}" text-anchor="middle"
               style="color:#606060;cursor:default;font-size:11px;fill:#606060;"
               opacity="1">
