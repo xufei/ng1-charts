@@ -1,0 +1,3 @@
+[submodule "src/models/chart"]
+	path = src/models/chart
+	url = https://github.com/xufei/chart.git
