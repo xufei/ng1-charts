@@ -1,8 +1,7 @@
-import angular from "angular";
 
-import ChessController from "./controllers/chess";
-import ChessBoardController from "./controllers/chessboard";
+import ChartController from "./controllers/chart";
 
-angular.module("chart", [])
-	.controller("ChessController", ChessController)
-	.controller("ChessBoardController", ChessBoardController);
+import components from "./components/index"
+
+angular.module("chart", [components])
+	.controller("ChartController", ChartController);

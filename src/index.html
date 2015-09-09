@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>ng1 charts demo</title>
+    <script src="//cdn.bootcss.com/angular.js/1.4.5/angular.min.js"></script>
     <base href="/">
 </head>
 <body>
 <div ng-app="chart">
     <div ng-controller="ChartController">
         <div>
+            <ng-bar-chart data="barChart"></ng-bar-chart>
         </div>
     </div>
 </div>
