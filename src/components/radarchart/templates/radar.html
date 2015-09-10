@@ -12,9 +12,8 @@
     <path fill="rgba(124,181,236,0.25)" d="M 0 0"></path>
     <path fill="rgba(67,67,72,0.25)" d="M 0 0"></path>
     <g zIndex="1">
-        <path fill="none" ng-repeat="axis in chart.xAxis" ng-attr-d="{{axis.path}}" stroke="#C0C0C0" stroke-width="1"
-              zIndex="1"
-              opacity="1"></path>
+        <path ng-repeat="axis in chart.xAxis" ng-attr-d="{{axis.path}}"
+              zIndex="1" fill="none" opacity="1" stroke="#C0C0C0" stroke-width="1"></path>
     </g>
     <g zIndex="1">
         <path fill="none" ng-repeat="axis in chart.yAxis" ng-attr-d="{{axis.path}}" stroke="#C0C0C0" stroke-width="1"
@@ -23,26 +22,21 @@
     <g zIndex="2"></g>
     <g zIndex="2"></g>
     <g zIndex="3">
-        <g visibility="visible" zIndex="0.1" transform="scale(1 1)"
-           clip-path="url(#highcharts-1)">
-            <path fill="none"
-                  ng-attr-d="{{chart.dataPath}}"
-                  stroke="#7cb5ec" stroke-width="2" zIndex="1" stroke-linejoin="round" stroke-linecap="round"></path>
-            <path fill="none"
-                  d="413 232.77999999999997 L 386.3818431892815 184.868 L 397.34226069957737 160.46 L 413 91.756 L 423 91.756"
-                  stroke-linejoin="round" visibility="visible" stroke="rgba(192,192,192,0.0001)" stroke-width="22"
-                  zIndex="2"></path>
+        <g zIndex="0.1" clip-path="url(#highcharts-1)">
+            <path ng-attr-d="{{chart.dataPath}}"
+                  zIndex="1" fill="none"
+                  stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
         </g>
         <g visibility="visible" zIndex="0.1" clip-path="none">
             <path fill="#434348" ng-repeat="marker in chart.markerPathArr"
                   ng-attr-d="{{marker}}"></path>
         </g>
     </g>
-    <text x="420" text-anchor="middle" zIndex="4"
-          style="color:#333333;font-size:18px;fill:#333333;width:936px;" y="25">
-        <tspan>Test Radar</tspan>
+    <text ng-attr-x="{{chart.width+20}}" text-anchor="middle" zIndex="4"
+          style="color:#333333;font-size:18px;fill:#333333;width:436px;" y="25">
+        <tspan>测试一下雷达图</tspan>
     </text>
-    <g zIndex="7" transform="translate(856,80)">
+    <g zIndex="7" ng-attr-transform="{{'translate(' + (chart.width + 50) + ', 80)'}}">
         <g zIndex="1">
             <g>
                 <g zIndex="1" transform="translate(8,3)">

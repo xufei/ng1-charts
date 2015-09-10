@@ -23,7 +23,7 @@ export default class PieChartDirective {
 		let chart = new PieChart();
 		chart.width = 800;
 		chart.height = 700;
-		chart.radius = 100;
+		chart.radius = $scope.radius || 150;
 
 		$scope.chart = chart;
 

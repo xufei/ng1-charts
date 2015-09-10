@@ -23,8 +23,10 @@ export default class RadarChartDirective {
 		$scope.offsetLeft = 100;
 		$scope.offsetTop = 50;
 
-		chart.width = 600;
-		chart.height = 300;
+		chart.radius = $scope.radius || 150;
+
+		chart.width = 2 * chart.radius;
+		chart.height = 2 * chart.radius;
 
 
 		$scope.$watch("data", function(newData) {
