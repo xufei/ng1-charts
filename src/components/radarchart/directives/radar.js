@@ -20,6 +20,13 @@ export default class RadarChartDirective {
 		let chart = new RadarChart();
 		$scope.chart = chart;
 
+		$scope.offsetLeft = 100;
+		$scope.offsetTop = 50;
+
+		chart.width = 600;
+		chart.height = 300;
+
+
 		$scope.$watch("data", function(newData) {
 			chart.data = newData;
 		}, true);

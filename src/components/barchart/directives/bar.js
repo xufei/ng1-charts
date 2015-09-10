@@ -20,6 +20,9 @@ export default class BarChartDirective {
 		let chart = new BarChart();
 		$scope.chart = chart;
 
+		$scope.offsetLeft = 100;
+		$scope.offsetTop = 50;
+
 		chart.width = 600;
 		chart.height = 400;
 

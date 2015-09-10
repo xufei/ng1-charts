@@ -9,18 +9,22 @@
 <body>
 <div ng-app="chart">
     <div ng-controller="ChartController">
-        <ul>
-            <li ng-repeat="item in chart[0].data"><input type="number" ng-model="item"/></li>
-        </ul>
+        <ol>
+            <li ng-repeat="chart in charts">
+                <ul>
+                    <li ng-repeat="item in chart.data"><input type="number" ng-model="item"/></li>
+                </ul>
+            </li>
+        </ol>
 
         <div>
-            <ng-bar-chart data="chart"></ng-bar-chart>
+            <ng-bar-chart data="charts"></ng-bar-chart>
         </div>
         <div>
-            <ng-pie-chart data="chart" radius="100"></ng-pie-chart>
+            <ng-pie-chart data="charts" radius="100"></ng-pie-chart>
         </div>
         <div>
-            <ng-radar-chart data="chart"></ng-radar-chart>
+            <ng-radar-chart data="charts"></ng-radar-chart>
         </div>
     </div>
 </div>
