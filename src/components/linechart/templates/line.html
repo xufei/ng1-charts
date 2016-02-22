@@ -40,7 +40,7 @@
         </text>
     </g>
 
-    <g zIndex="3" ng-attr-transform="{{'translate(' + offsetLeft + ',' + offsetTop + ')'}}">
+    <g zIndex="3" ng-attr-transform="{{'translate(' + offsetLeft + ',' + (offsetTop + chart.height) + ') scale(1, -1)'}}">
         <g zIndex="0.1" clip-path="url(#highcharts-1)">
             <path ng-attr-d="{{chart.dataPath}}"
                   zIndex="1" fill="none"
