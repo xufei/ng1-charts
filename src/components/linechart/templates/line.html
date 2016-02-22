@@ -1,0 +1,104 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="1000" height="600">
+    <title>用AngularJS做图表</title>
+    <desc>用AngularJS生成的折线图</desc>
+
+    <defs>
+        <clipPath>
+            <rect x="0" y="0" width="914" height="717"></rect>
+        </clipPath>
+    </defs>
+
+
+    <rect x="0" y="0" width="1000" height="800" strokeWidth="0" fill="#FFFFFF"></rect>
+
+
+    <path fill="none"
+          ng-attr-transform="{{'translate(0,' + (chart.height+offsetTop) + ')'}}"
+          ng-attr-d="{{chart.xAxisPath}}" stroke="#808080" strok-width="4"></path>
+
+    <path fill="rgba(124,181,236,0.25)" d="M 0 0"></path>
+
+    <!--横向间隔线-->
+    <g zIndex="1" ng-attr-transform="{{'translate(' + offsetLeft + ',' + offsetTop + ')'}}">
+        <path ng-repeat="axis in chart.yAxis" ng-attr-d="{{axis.path}}"
+              fill="none" stroke="#C0C0C0" stroke-width="1" zIndex="1" opacity="1"></path>
+    </g>
+
+    <g zIndex="2" ng-attr-transform="{{'translate(' + (offsetLeft-50) + ',' + (offsetTop-100) + ')'}}">
+        <path ng-repeat="axis in chart.xAxis"
+              ng-attr-d="{{axis.path}}"
+              stroke="#C0D0E0"
+              stroke-width="1"
+              fill="none"
+              opacity="1"></path>
+    </g>
+
+    <g zIndex="2">
+        <text x="24.4375" zIndex="7" text-anchor="middle"
+              transform="translate(0,0) rotate(270 24.4375 204.5)"
+              style="color:#707070;fill:#707070;" visibility="visible" y="204.5">Value
+        </text>
+    </g>
+
+    <g zIndex="3" ng-attr-transform="{{'translate(' + offsetLeft + ',' + offsetTop + ')'}}">
+        <g zIndex="0.1" clip-path="url(#highcharts-1)">
+            <path ng-attr-d="{{chart.dataPath}}"
+                  zIndex="1" fill="none"
+                  stroke="#7cb5ec" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
+        </g>
+        <g visibility="visible" zIndex="0.1" clip-path="none">
+            <path fill="#434348" ng-repeat="marker in chart.markerPathArr"
+                  ng-attr-d="{{marker}}"></path>
+        </g>
+    </g>
+
+    <text x="500" text-anchor="middle" zIndex="4"
+          style="color:#333333;font-size:18px;fill:#333333;width:936px;" y="25">
+        <tspan>Test</tspan>
+    </text>
+
+    <!--横坐标刻度-->
+    <g zIndex="7" ng-attr-transform="{{'translate(' + (offsetLeft+10) + ',' + (chart.height+offsetTop+15) + ')'}}">
+        <text ng-repeat="axis in chart.xAxis" ng-attr-x="{{axis.x}}" text-anchor="middle"
+              style="color:#606060;cursor:default;font-size:11px;fill:#606060;" opacity="1">
+            {{axis.number}}
+        </text>
+    </g>
+
+    <!--纵坐标刻度-->
+    <g zIndex="7" ng-attr-transform="{{'translate(0,' + (chart.height + offsetTop) + ')'}}">
+        <text ng-repeat="axis in chart.yAxis"
+              ng-attr-y="{{-axis.y}}"
+              ng-attr-x="{{offsetLeft-5}}"
+              text-anchor="end"
+              style="width:310px;color:#606060;cursor:default;font-size:11px;fill:#606060;"
+              opacity="1">
+            {{axis.number}}
+        </text>
+    </g>
+
+    <g zIndex="8" style="cursor:default;padding:0;white-space:nowrap;"
+       transform="translate(764,181)" opacity="0" visibility="hidden">
+        <path fill="none"
+              d="M 3.5 0.5 L 145.5 0.5 C 148.5 0.5 148.5 0.5 148.5 3.5 L 148.5 59.5 C 148.5 62.5 148.5 62.5 145.5 62.5 L 80.5 62.5 74.5 68.5 68.5 62.5 3.5 62.5 C 0.5 62.5 0.5 62.5 0.5 59.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+              isShadow="true" stroke="black" stroke-opacity="0.049999999999999996" stroke-width="5"
+              transform="translate(1, 1)" width="148" height="62"></path>
+        <path fill="none"
+              d="M 3.5 0.5 L 145.5 0.5 C 148.5 0.5 148.5 0.5 148.5 3.5 L 148.5 59.5 C 148.5 62.5 148.5 62.5 145.5 62.5 L 80.5 62.5 74.5 68.5 68.5 62.5 3.5 62.5 C 0.5 62.5 0.5 62.5 0.5 59.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+              isShadow="true" stroke="black" stroke-opacity="0.09999999999999999" stroke-width="3"
+              transform="translate(1, 1)" width="148" height="62"></path>
+        <path fill="none"
+              d="M 3.5 0.5 L 145.5 0.5 C 148.5 0.5 148.5 0.5 148.5 3.5 L 148.5 59.5 C 148.5 62.5 148.5 62.5 145.5 62.5 L 80.5 62.5 74.5 68.5 68.5 62.5 3.5 62.5 C 0.5 62.5 0.5 62.5 0.5 59.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+              isShadow="true" stroke="black" stroke-opacity="0.15" stroke-width="1"
+              transform="translate(1, 1)"
+              width="148" height="62"></path>
+        <path fill="rgba(249, 249, 249, .85)"
+              d="M 3.5 0.5 L 145.5 0.5 C 148.5 0.5 148.5 0.5 148.5 3.5 L 148.5 59.5 C 148.5 62.5 148.5 62.5 145.5 62.5 L 80.5 62.5 74.5 68.5 68.5 62.5 3.5 62.5 C 0.5 62.5 0.5 62.5 0.5 59.5 L 0.5 3.5 C 0.5 0.5 0.5 0.5 3.5 0.5"
+              stroke="#7cb5ec" stroke-width="1"></path>
+        <text x="8" zIndex="1" style="font-size:12px;color:#333333;fill:#333333;" y="21">
+            <tspan style="font-weight:bold">Random data</tspan>
+            <tspan x="8" dy="16">2014-12-11 16:07:51</tspan>
+            <tspan x="8" dy="16">0.24</tspan>
+        </text>
+    </g>
+</svg>

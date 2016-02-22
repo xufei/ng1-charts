@@ -5,6 +5,13 @@
     <title>ng1 charts demo</title>
     <script src="//cdn.bootcss.com/angular.js/1.4.5/angular.min.js"></script>
     <base href="/">
+    
+    <style>
+        .chart {
+            float: left;
+            width: 50%;
+        }
+    </style>
 </head>
 <body>
 <div ng-app="chart">
@@ -17,13 +24,16 @@
             </li>
         </ol>
 
-        <div>
+        <div class="chart">
             <ng-bar-chart data="charts"></ng-bar-chart>
         </div>
-        <div>
+        <div class="chart">
+            <ng-line-chart data="charts"></ng-line-chart>
+        </div>
+        <div class="chart">
             <ng-pie-chart data="charts" radius="100"></ng-pie-chart>
         </div>
-        <div>
+        <div class="chart">
             <ng-radar-chart data="charts"></ng-radar-chart>
         </div>
     </div>
