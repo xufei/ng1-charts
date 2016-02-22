@@ -13,7 +13,6 @@ export default class BarChartDirective {
 	}
 
 	link(scope, element, attrs) {
-		this.$scope = scope;
 	}
 
 	controller($scope) {

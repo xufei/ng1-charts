@@ -16,7 +16,6 @@ export default class PieChartDirective {
 	}
 
 	link(scope, element, attrs) {
-		this.$scope = scope;
 	}
 
 	controller($scope) {

@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ng1 charts demo</title>
+    <script src="//cdn.bootcss.com/angular.js/1.4.5/angular.min.js"></script>
+    <base href="/">
+<link href="/ng1-charts.css" rel="stylesheet"></head>
+<body>
+<div ng-app="chart">
+    <div ng-controller="ChartController">
+        <ol>
+            <li ng-repeat="chart in charts">
+                <ul>
+                    <li ng-repeat="item in chart.data"><input type="number" ng-model="item"></li>
+                </ul>
+            </li>
+        </ol>
+
+        <div>
+            <ng-bar-chart data="charts"></ng-bar-chart>
+        </div>
+        <div>
+            <ng-pie-chart data="charts" radius="100"></ng-pie-chart>
+        </div>
+        <div>
+            <ng-radar-chart data="charts"></ng-radar-chart>
+        </div>
+    </div>
+</div>
+<script src="/ng1-charts.js"></script></body>
+</html>
